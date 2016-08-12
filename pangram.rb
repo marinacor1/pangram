@@ -7,16 +7,16 @@ class Pangram
       letter_count = Hash.new()
       letters = str.split('')
       counter = 0
-      self.create_count(letters, letter_count)
+      self.create_count(letters, letter_count, counter)
     end
   end
 
-  def self.create_count(letters, letter_count)
+  def self.create_count(letters, letter_count, counter)
     letters.each do |letter|
-      if letters_count.keys == letter
-        letters_count[letter] = counter + 1
+      if letter_count.keys == letter
+        letter_count[letter] = counter + 1
       else
-        letters_count[letter] = counter
+        letter_count[letter] = counter
       end
     end
   end
